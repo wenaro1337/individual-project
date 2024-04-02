@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.header-task {
+  position: sticky;
+  font-size: 25px;
+  padding: 0 30%;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #7f5af0;
+}
+
+.header-task a {
+  text-decoration: none;
+  color: #fffffe;
+  transition: .3s;
+}
+
+
+.header-task a:hover {
+  color: #2cb67d;
+  transition: .3s;
+}
+
+
+
+
+.container {
+
+  position: relative;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  box-sizing: border-box;
+  flex-direction:column;
+  margin: 0 auto;
+  max-width: 70%;
+}
+
+li {
+  padding: 10px;
+  width: 50%;
+  border-collapse: collapse;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 8px;  
+  font-size: x-large;
+  list-style-type: none;
+  background-color: #72757e;
+
+  border-radius: 6px;
+  transition: .3s;
+
+}
+
+li:hover {
+  background-color: rgba(187, 180, 180, 0.1);
+  transition: .3s;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+strong {
+  font-weight: 700;
+}
+
+a h2 {
+  color: #d3d3d3;
+  font-size: 25px;
+  font-weight: 700;
+  display: contents;
+}
+
+a p {
+  color: black;
+  font-size: 20px;
+}
+
+.margin {
+  margin-top: 20px;
+
+}
+
+hr {
+  color: grey;
+}
+
+.passed {
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  font-size:30px;
+  color: #2cb67d;
+  
+}
+.not-passed {
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  font-size:30px;
+  color: rgb(183, 26, 26);
+}
+
+form {
+  padding-top: 50px;
+}
+
+input {
+  height: 25px;
+  margin: 10px;
+  text-indent: 5px;
+  font-size: 12.6pt;
+  border-radius: 5px;
+  border: solid 1.5px #D3D3D3;
+  -webkit-transition: 1s; /* Safari */
+  transition: 1s;
+}
+input[type=text]:hover{
+  box-shadow: 0 0 5pt 0.5pt #D3D3D3;
+}
+input[type=text]:focus {
+  box-shadow: 0 0 5pt 2pt #D3D3D3;
+  outline-width: 0px;
+}
+button {
+  width: 150px;
+  height: 30px;
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+button:hover {
+  background-color: rgb(71, 71, 71);
+  transition: .3s;
+  
+}

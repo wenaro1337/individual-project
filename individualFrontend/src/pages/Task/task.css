@@ -1,0 +1,28 @@
+.background {
+    top: 10px;
+    color: black;
+    background-color: #72757e;
+    border-radius: 10px;
+}
+
+p {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+hr {
+    color: #fffffea9;
+    border: none;
+    background-color: #fffffea9;
+    height: 2px;
+}
+
+.correct {
+    color: #2cb67d;
+}
+
+.not-correct {
+    color: rgb(183, 26, 26);
+}
