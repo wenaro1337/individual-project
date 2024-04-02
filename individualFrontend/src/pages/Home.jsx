@@ -20,9 +20,6 @@ function Home() {
         <a href="#">
           <FaGithub style={{ fontSize: 30, color: "black" }} />
         </a>
-        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab" onClick={() => window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab")}>
-          rickroll
-        </a>
         <a href="https://vk.com/denprogrammers">
           <SlSocialVkontakte style={{ fontSize: 30, color: "black" }} />
         </a>
