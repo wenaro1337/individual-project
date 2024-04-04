@@ -1,5 +1,4 @@
 from django.shortcuts import render
-
 from rest_framework import viewsets
 from .models import  SevenGradeTasks, SevenGradeDirectory
 from .serializers import SevenGradeTasksSerializer, SevenGradeDirectorySerializer
@@ -18,7 +17,7 @@ class SevenGradeGETID(APIView):
     queryset = SevenGradeTasks.objects.all()
     serializer_class = SevenGradeTasksSerializer
     lookup_field = "id"
-
+ 
     def get(self, request, id):
         try:
             task = self.queryset.get(id=id)
