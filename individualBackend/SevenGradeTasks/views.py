@@ -17,7 +17,7 @@ class SevenGradeGETID(APIView):
     queryset = SevenGradeTasks.objects.all()
     serializer_class = SevenGradeTasksSerializer
     lookup_field = "id"
-
+ 
     def get(self, request, id):
         try:
             task = self.queryset.get(id=id)
