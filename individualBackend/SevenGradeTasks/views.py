@@ -1,8 +1,8 @@
 from django.shortcuts import render
 
 from rest_framework import viewsets
-from .models import  SevenGradeTasks
-from .serializers import SevenGradeTasksSerializer
+from .models import  SevenGradeTasks, SevenGradeDirectory
+from .serializers import SevenGradeTasksSerializer, SevenGradeDirectorySerializer
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework import status
@@ -37,4 +37,23 @@ class SevenGradeGETID(APIView):
                 return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
         except SevenGradeTasks.DoesNotExist:
             return Response({"detail": "Задача с указанным id не найдена."}, status=status.HTTP_404_NOT_FOUND)
+        
+class SevenGradeDirectoryViewSet(viewsets.ViewSet):
+    def list(self, request):
+        queryset =  SevenGradeDirectory.objects.all()
+        serializer_class = SevenGradeDirectorySerializer(queryset, many=True)
+        return Response(serializer_class.data)
+    
+class SevenGradeDirectoryGETID(APIView):
+    queryset = SevenGradeDirectory.objects.all()
+    serializer_class = SevenGradeDirectorySerializer
+    lookup_field = "id"
+
+    def get(self, request, id):
+        try:
+            task = self.queryset.get(id=id)
+            serializer = self.serializer_class(task)
+            return Response(serializer.data)
+        except SevenGradeTasks.DoesNotExist:
+            return Response({"error": "Задача с указанным id не найдена."}, status=status.HTTP_404_NOT_FOUND)
 

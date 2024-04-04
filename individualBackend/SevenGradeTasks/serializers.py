@@ -1,5 +1,5 @@
 from rest_framework.serializers import ModelSerializer
-from .models import SevenGradeTasks
+from .models import SevenGradeTasks, SevenGradeDirectory
 
 class SevenGradeTasksSerializer(ModelSerializer):
     class Meta:
@@ -11,3 +11,8 @@ class SevenGradeTasksSerializer(ModelSerializer):
         if representation['onlypicrute'] == '':
             representation['onlypicrute'] = None
         return representation
+    
+class SevenGradeDirectorySerializer(ModelSerializer):
+    class Meta:
+        model = SevenGradeDirectory
+        fields = "__all__"

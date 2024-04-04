@@ -11,3 +11,10 @@ class SevenGradeTasks(models.Model):
 
     def __str__(self):
         return self.question[0:50]
+    
+class SevenGradeDirectory(models.Model):
+    title = models.TextField(default='')
+    subtitle = CKEditor5Field(blank=True, config_name='extends')
+
+    def __str__(self):
+        return self.title[0:50]
