@@ -171,7 +171,17 @@ button:hover {
 
 .footer a {
   text-decoration: none;
-  padding: 100px;
 }
 
 
+.card {
+  background-color: rgb(190, 189, 189);
+  margin-top: 20px;
+}
+.ant-card-head-title {
+  font-size: 35px; /* измените значение размера шрифта по вашему желанию */
+}
+
+h1 {
+  color: red
+}

@@ -8,6 +8,7 @@ function Header() {
   return (
     <header className="header-task">
       <Link to="/" className={currentPath === '/' ? 'active' : ''}>{logo}</Link>
+      <Link to="/directory" className={currentPath === '/directory' ? 'active' : ''}>Cправочник</Link>
       <Link to="/tasks" className={currentPath === '/tasks' ? 'active' : ''}>Задачи</Link>
       <Link to="/teacher" className={currentPath === '/teacher' ? 'active' : ''}>Учителю</Link>
     </header>

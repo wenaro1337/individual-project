@@ -2,17 +2,11 @@ import { Link } from "react-router-dom";
 import "../App.css";
 import { IoIosCheckmarkCircleOutline } from "react-icons/io";
 import { IoIosCloseCircleOutline } from "react-icons/io";
-
+import { getTitle } from "../utils";
 
 
 function ListItem({ task }) {
-  let getTitle = (title) => {
-    if (title.length > 50) {
-      return title.slice(50) + "...";
-    } else {
-      return title;
-    }
-  };
+  
   return (
     <li className="container margin">
       <Link to={`/tasks/${task.id}`}>

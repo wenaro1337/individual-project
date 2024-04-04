@@ -20,10 +20,10 @@ function Home() {
         <a href="#">
           <FaGithub style={{ fontSize: 30, color: "black" }} />
         </a>
-        <a href="https://vk.com/denprogrammers">
+        <a style={{paddingLeft: 100}} href="https://vk.com/denprogrammers">
           <SlSocialVkontakte style={{ fontSize: 30, color: "black" }} />
         </a>
-        <a href="https://t.me/eclipsecode">
+        <a style={{paddingLeft: 100}} href="https://t.me/eclipsecode">
           <FaTelegram style={{ fontSize: 30, color: "black" }} />
         </a>
       </footer>
