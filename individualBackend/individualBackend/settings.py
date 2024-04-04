@@ -159,11 +159,19 @@ customColorPalette = [
     },
 ]
 
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static_files"),
+]
+
+CKEDITOR_5_CUSTOM_CSS = "custom.css"
+
 CKEDITOR_5_CONFIGS = {
     'default': {
         'toolbar': ['heading', '|', 'bold', 'italic', 'link',
                     'bulletedList', 'numberedList', 'blockQuote', 'imageUpload', ],
-
+    },
+    'custom': {
+        'toolbar': ['imageUpload', ],
     },
     'extends': {
         'blockToolbar': [
@@ -220,7 +228,7 @@ CKEDITOR_5_CONFIGS = {
     }
 }
 
-
+ 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
