@@ -8,11 +8,11 @@ import { getTitle } from "../utils";
 function ListItem({ task }) {
   
   return (
-    <li className="container margin">
+    <li className="container">
       <Link to={`/tasks/${task.id}`}>
         <h2>{`Задача  ${task.id}`}</h2>
         {task.passed ? <IoIosCheckmarkCircleOutline className="passed" /> : <IoIosCloseCircleOutline className="not-passed" />}
-        <hr />
+        <hr/>
         <p><strong>Условие:</strong> {getTitle(task.question)}</p>
       </Link>
     </li>

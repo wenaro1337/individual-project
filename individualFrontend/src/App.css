@@ -36,12 +36,21 @@
 
 
 .container {
-
   position: relative;
   display: flex;
   text-align: center;
   justify-content: center;
+  box-sizing: border-box;
+  flex-direction:column;
+  margin: 0 auto;
+  margin-top: 20px;
+  max-width: 70%;
+}
+.container-1 {
+  position: relative;
+  display: flex;
   text-align: center;
+  justify-content: center;
   box-sizing: border-box;
   flex-direction:column;
   margin: 0 auto;
@@ -80,7 +89,6 @@ a h2 {
   color: #d3d3d3;
   font-size: 25px;
   font-weight: 700;
-  display: contents;
 }
 
 a p {
@@ -88,13 +96,10 @@ a p {
   font-size: 20px;
 }
 
-.margin {
-  margin-top: 20px;
-
-}
 
 hr {
   color: grey;
+  width: 100%;
 }
 
 .passed {
@@ -124,7 +129,7 @@ input {
   font-size: 12.6pt;
   border-radius: 5px;
   border: solid 1.5px #D3D3D3;
-  -webkit-transition: 1s; /* Safari */
+  -webkit-transition: 1s; 
   transition: 1s;
 }
 input[type=text]:hover{
@@ -179,9 +184,5 @@ button:hover {
   margin-top: 20px;
 }
 .ant-card-head-title {
-  font-size: 35px; /* измените значение размера шрифта по вашему желанию */
-}
-
-h1 {
-  color: red
+  font-size: 35px; 
 }

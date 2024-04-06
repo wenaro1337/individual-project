@@ -16,7 +16,7 @@ function App() {
         <Route path="/directory" element={<DirectoryList />} />
         <Route path="/directory/:directoryId" element={<Directory />} />
         <Route path="/tasks" element={<TasksList />} />
-        <Route path="/tasks/:tasksId" element={<Task />} />
+        <Route path="/tasks/:taskId" element={<Task />} />
       </Routes>
     </div>
   );

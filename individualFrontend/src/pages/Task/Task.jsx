@@ -8,12 +8,12 @@ export default function Task() {
   const [answer, setAnswer] = useState("");
   const [correct, setCorrect] = useState(null);
 
-  const { tasksId } = useParams();
+  const { taskId } = useParams();
 
   const updateTask = async () => {
     const copyTask = { ...task };
     copyTask.passed = true;
-    await fetch(`${import.meta.env.VITE_API_URL}tasks/7thGrade/${tasksId}`, {
+    await fetch(`${import.meta.env.VITE_API_URL}tasks/7thGrade/${taskId}`, {
       method: "PUT",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify(copyTask),
@@ -32,10 +32,10 @@ export default function Task() {
       setCorrect(false);
     }
   }
-  async function fetchtask() {
+  async function fetchTask() {
     try {
       const response = await fetch(
-        `${import.meta.env.VITE_API_URL}tasks/7thGrade/${tasksId}`
+        `${import.meta.env.VITE_API_URL}tasks/7thGrade/${taskId}`
       );
       if (!response.ok) {
         throw new Error("Networck response was not ok");
@@ -48,7 +48,7 @@ export default function Task() {
   }
 
   useEffect(() => {
-    fetchtask();
+    fetchTask();
   }, []);
   return (
     <div className="container background">

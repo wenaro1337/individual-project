@@ -1,11 +1,12 @@
-import { Card, Space } from "antd";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { getTitle } from "../utils";
 
 function DirectoryList() {
   const [directorys, setDirectorys] = useState([]);
   async function getDirectorys() {
     const response = await fetch(
-      "http://localhost:8000/api/tasks/7thGradeDirectory"
+      "http://localhost:8000/api/directory/7thGrade"
     );
     const data = await response.json();
     setDirectorys(data);
@@ -14,16 +15,18 @@ function DirectoryList() {
     getDirectorys();
   }, []);
   return (
-    <div className="container">
-      <Space direction="vertical" align="center" size="middle" style={{ display: "flex" }}>
+    <div style={{alignItems: "center"}} className="container-1" >
         {directorys.map((directory) => {
           return (
-            <Card title={directory.title} key={directory.id} size="medium" style={{ width: 1000 }} className="card">
-              <h1 style={{ fontSize: "200px" }} dangerouslySetInnerHTML={{ __html: directory.subtitle }}></h1>
-            </Card>
+            <li className="container" key={directory.id} >
+              <Link to={`/directory/${directory.id}`}>
+                <h2>{`Тема ${directory.id}`}</h2>
+                <hr />
+                <p>{getTitle(directory.title)}</p>
+              </Link>
+            </li>
           );
         })}
-      </Space>
     </div>
   );
 }

@@ -14,7 +14,7 @@ function TasksList() {
     getTasks();
   }, [])
   return (
-    <div className="container">
+    <div className="container-1">
       {tasks.map((task) => 
         <ListItem  key={task.id}  task={task}></ListItem>
       )}
