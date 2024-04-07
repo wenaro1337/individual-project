@@ -18,7 +18,8 @@ function Directory() {
   return (<div className="container background">
     <h1>{directory.title}</h1>
     <hr />
-    <div dangerouslySetInnerHTML={{__html:directory.body}}></div>
+
+    <div style={{fontSize: "1rem"}} dangerouslySetInnerHTML={{__html:directory.body}}></div>
   </div>);
 }
 

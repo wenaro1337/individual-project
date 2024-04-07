@@ -17,7 +17,7 @@ function Home() {
         </div>
       </div>
       <footer className="footer">
-        <a href="#">
+        <a href="https://github.com/wenaro1337/individual-project">
           <FaGithub style={{ fontSize: 30, color: "black" }} />
         </a>
         <a style={{paddingLeft: 100}} href="https://vk.com/denprogrammers">

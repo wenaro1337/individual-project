@@ -52,7 +52,7 @@ export default function Task() {
   }, []);
   return (
     <div className="container background">
-      <p>{task.question}</p>
+      <p style = {{fontSize: "2.5rem"}} >{task.question}</p>
       <hr></hr>
       <div
         style={{ fontSize: 2 + "rem", color: "white" }}
